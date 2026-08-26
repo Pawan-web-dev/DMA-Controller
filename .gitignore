@@ -1,0 +1,17 @@
+# Questa / ModelSim generated files
+work/
+modelsim.ini
+
+# Questa simulation databases
+*.wlf
+*.qdb
+*.qpg
+*.qtl
+*.mpf
+*.mti
+
+# Backup files
+*.bak
+
+# Log files
+*.log
