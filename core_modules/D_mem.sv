@@ -12,11 +12,11 @@ module D_mem (
 
 	logic [31:0] mem [512:0];
 
-	always_ff @(posedge clk) begin
-		if (we)
-			mem[addr] <= wd;
-		else
-			data_out <= mem[addr];
-	end
+    assign data_out = mem[addr];
+
+    always_ff @(posedge clk) begin
+        if (we)
+            mem[addr] <= wd;
+    end
 
 endmodule

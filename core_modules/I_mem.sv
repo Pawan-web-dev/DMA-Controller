@@ -10,7 +10,8 @@ module I_mem (
 
 	logic [31:0] mem [512:0];
 
-	always_ff @(posedge clk)
-		instruction <= mem[addr];
+  assign instruction = mem[addr];
 
 endmodule
+
+

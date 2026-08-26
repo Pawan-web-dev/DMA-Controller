@@ -20,13 +20,13 @@ module reg_file (
 
 	logic [31:0] register [31:0];
 	
-	always_ff @(posedge clk or negedge clk) begin
-		if (clk && we) begin
-			register[rd] <= wd;
-		end
-		else if (~clk) begin
-			Ra <= register[rs_1];
-			Rb <= register[rs_2];
-		end		
-	end
+    always_ff @(posedge clk) begin
+        if (we && rd != 5'd0)
+            register[rd] <= wd;
+    end
+
+    assign Ra = (rs_1 == 5'd0) ? 32'h0 : register[rs_1];
+    assign Rb = (rs_2 == 5'd0) ? 32'h0 : register[rs_2];
 endmodule
+
+

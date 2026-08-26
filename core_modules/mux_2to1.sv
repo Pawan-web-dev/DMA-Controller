@@ -1,6 +1,6 @@
 
 
-module mux_3to1 (
+module mux_2to1 (
 	input logic sel,
 	input logic [31:0] A,
 	input logic [31:0] B,
