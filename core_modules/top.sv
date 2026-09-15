@@ -25,7 +25,7 @@ module top (
     logic [1:0] ImmSrc;
     logic [2:0] ALUControl;
 
-    controller c1(
+    controller c1 (
         .op        (instruction[6:0]),
         .funct3    (instruction[14:12]),
         .funct7b5  (instruction[30]),
@@ -40,20 +40,20 @@ module top (
         .ALUControl(ALUControl)
     );
 
-    PC pcreg(
+    PC pcreg (
         .clk    (clk),
         .rst_n  (rst_n),
         .pc_next(pc_next),
         .pc_out (pc_out)
     );
 
-    adder_pc pcplus4(
+    adder pcplus4 (
         .A(pc_out),
         .B(32'd4),
         .Y(PCPlus4)
     );
 
-    adder_pc pctarget(
+    adder pctarget (
         .A(pc_out),
         .B(immext),
         .Y(PCTarget)
@@ -61,13 +61,13 @@ module top (
 
     assign pc_next = PCSrc ? PCTarget : PCPlus4;
 
-    I_mem imem(
+    I_mem imem (
         .clk        (clk),
         .addr       (pc_out),
         .instruction(instruction)
     );
 
-    reg_file rf(
+    reg_file rf (
         .clk (clk),
         .we  (RegWrite),
         .wd  (ResultW),
@@ -78,7 +78,7 @@ module top (
         .Rb  (Rb)
     );
 
-    imm_extend ext(
+    imm_extend ext (
         .instr (instruction[31:7]),
         .immsrc(ImmSrc),
         .immext(immext)
@@ -87,7 +87,7 @@ module top (
     assign src_A = Ra;
     assign src_B = ALUSrc ? immext : Rb;
 
-    ALU alu(
+    ALU alu (
         .src_A     (src_A),
         .src_B     (src_B),
         .ALU_select(ALUControl),
@@ -95,7 +95,7 @@ module top (
         .zero_f    (zero_f)
     );
 
-    D_mem dmem(
+    D_mem dmem (
         .clk     (clk),
         .we      (MemWrite),
         .addr    (ALU_out),
@@ -103,7 +103,7 @@ module top (
         .data_out(data_out)
     );
 
-    mux_3to1 resultmux(
+    mux_3to1 resultmux (
         .sel(ResultSrc),
         .A  (ALU_out),
         .B  (data_out),
