@@ -8,6 +8,7 @@ package dma_pkg;
    `include "../agents/dma_agent/dma_driver.sv"
 `include "../agents/dma_agent/dma_monitor.sv"
 `include "../agents/dma_agent/dma_agent.sv"
+`include "../../coverage/dma/functional/dma_coverage.sv"
  `include "../env/dma_scoreboard.sv"
  `include "../env/dma_env.sv"
 `include "../agents/dma_agent/dma_sequence.sv"

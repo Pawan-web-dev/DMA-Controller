@@ -7,12 +7,14 @@
 // Contains:
 //   - DMA agent
 //   - DMA scoreboard
+//   - DMA functional coverage
 //
-// Connection:
-//   dma_monitor.analysis_port
+// Connections:
+//   dma_monitor.item_collected_port
 //           |
-//           v
-//   dma_scoreboard.analysis_export
+//           +------------------> dma_scoreboard.item_collected_export
+//           |
+//           +------------------> dma_coverage.analysis_export
 //=============================================================================
 
 class dma_env extends uvm_env;
@@ -28,6 +30,11 @@ class dma_env extends uvm_env;
     // DMA scoreboard
     //============================================================
     dma_scoreboard dma_scoreboard_h;
+
+    //============================================================
+    // DMA functional coverage
+    //============================================================
+    dma_coverage dma_coverage_h;
 
 
     //============================================================
@@ -56,13 +63,19 @@ class dma_env extends uvm_env;
             this
         );
 
-        // DMA agent is active because the driver will configure
+        // DMA agent is active because the driver configures
         // the DMA through the CSR interface.
         dma_agent_h.is_active = UVM_ACTIVE;
 
         // Create scoreboard
         dma_scoreboard_h = dma_scoreboard::type_id::create(
             "dma_scoreboard_h",
+            this
+        );
+
+        // Create functional coverage
+        dma_coverage_h = dma_coverage::type_id::create(
+            "dma_coverage_h",
             this
         );
 
@@ -76,9 +89,14 @@ class dma_env extends uvm_env;
 
         super.connect_phase(phase);
 
-        // Connect monitor -> scoreboard
+        // Monitor -> Scoreboard
         dma_agent_h.monitor.item_collected_port.connect(
             dma_scoreboard_h.item_collected_export
+        );
+
+        // Monitor -> Functional Coverage
+        dma_agent_h.monitor.item_collected_port.connect(
+            dma_coverage_h.analysis_export
         );
 
     endfunction

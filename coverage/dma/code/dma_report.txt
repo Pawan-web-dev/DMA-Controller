@@ -1,0 +1,324 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /dma_pkg
+=== Design Unit: work.dma_pkg
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na    32.96%
+        Coverpoints/Crosses          9        na        na        na
+            Covergroup Bins         37         9        28    24.32%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /dma_pkg/dma_coverage/dma_cg                     32.96%        100          -    Uncovered            
+    covered/total bins:                                     9         37          -                      
+    missing/total bins:                                    28         37          -                      
+    % Hit:                                             24.32%        100          -                      
+    Coverpoint cp_length                               20.00%        100          -    Uncovered            
+        covered/total bins:                                 1          5          -                      
+        missing/total bins:                                 4          5          -                      
+        % Hit:                                         20.00%        100          -                      
+        bin zero_length                                     0          1          -    ZERO                 
+        bin one_word                                        0          1          -    ZERO                 
+        bin len_2_4                                         1          1          -    Covered              
+        bin len_5_8                                         0          1          -    ZERO                 
+        bin len_9_16                                        0          1          -    ZERO                 
+    Coverpoint cp_irq                                  50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin irq_disabled                                    0          1          -    ZERO                 
+        bin irq_enabled                                     1          1          -    Covered              
+    Coverpoint cp_error                                50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin success                                         1          1          -    Covered              
+        bin failure                                         0          1          -    ZERO                 
+    Coverpoint cp_error_code                           16.66%        100          -    Uncovered            
+        covered/total bins:                                 1          6          -                      
+        missing/total bins:                                 5          6          -                      
+        % Hit:                                         16.66%        100          -                      
+        bin no_error                                        1          1          -    Covered              
+        bin zero_len_err                                    0          1          -    ZERO                 
+        bin align_err                                       0          1          -    ZERO                 
+        bin read_err                                        0          1          -    ZERO                 
+        bin write_err                                       0          1          -    ZERO                 
+        bin other_err                                       0          1          -    ZERO                 
+    Coverpoint cp_src_align                            50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin aligned                                         1          1          -    Covered              
+        bin unaligned                                       0          1          -    ZERO                 
+    Coverpoint cp_dst_align                            50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin aligned                                         1          1          -    Covered              
+        bin unaligned                                       0          1          -    ZERO                 
+    Cross cross_length_error                           10.00%        100          -    Uncovered            
+        covered/total bins:                                 1         10          -                      
+        missing/total bins:                                 9         10          -                      
+        % Hit:                                         10.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <len_2_4,success>                           1          1          -    Covered              
+            bin <len_9_16,*>                                0          1          2    ZERO                 
+            bin <len_5_8,*>                                 0          1          2    ZERO                 
+            bin <one_word,*>                                0          1          2    ZERO                 
+            bin <zero_length,*>                             0          1          2    ZERO                 
+            bin <*,failure>                                 0          1          5    ZERO                 
+    Cross cross_irq_error                              25.00%        100          -    Uncovered            
+        covered/total bins:                                 1          4          -                      
+        missing/total bins:                                 3          4          -                      
+        % Hit:                                         25.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <irq_enabled,success>                       1          1          -    Covered              
+            bin <irq_disabled,*>                            0          1          2    ZERO                 
+            bin <*,failure>                                 0          1          2    ZERO                 
+    Cross cross_src_dst_align                          25.00%        100          -    Uncovered            
+        covered/total bins:                                 1          4          -                      
+        missing/total bins:                                 3          4          -                      
+        % Hit:                                         25.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <aligned,aligned>                           1          1          -    Covered              
+            bin <unaligned,*>                               0          1          2    ZERO                 
+            bin <*,unaligned>                               0          1          2    ZERO                 
+ Covergroup instance \/dma_pkg::dma_coverage::dma_cg  
+                                                       32.96%        100          -    Uncovered            
+    covered/total bins:                                     9         37          -                      
+    missing/total bins:                                    28         37          -                      
+    % Hit:                                             24.32%        100          -                      
+    Coverpoint cp_length                               20.00%        100          -    Uncovered            
+        covered/total bins:                                 1          5          -                      
+        missing/total bins:                                 4          5          -                      
+        % Hit:                                         20.00%        100          -                      
+        bin zero_length                                     0          1          -    ZERO                 
+        bin one_word                                        0          1          -    ZERO                 
+        bin len_2_4                                         1          1          -    Covered              
+        bin len_5_8                                         0          1          -    ZERO                 
+        bin len_9_16                                        0          1          -    ZERO                 
+    Coverpoint cp_irq                                  50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin irq_disabled                                    0          1          -    ZERO                 
+        bin irq_enabled                                     1          1          -    Covered              
+    Coverpoint cp_error                                50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin success                                         1          1          -    Covered              
+        bin failure                                         0          1          -    ZERO                 
+    Coverpoint cp_error_code                           16.66%        100          -    Uncovered            
+        covered/total bins:                                 1          6          -                      
+        missing/total bins:                                 5          6          -                      
+        % Hit:                                         16.66%        100          -                      
+        bin no_error                                        1          1          -    Covered              
+        bin zero_len_err                                    0          1          -    ZERO                 
+        bin align_err                                       0          1          -    ZERO                 
+        bin read_err                                        0          1          -    ZERO                 
+        bin write_err                                       0          1          -    ZERO                 
+        bin other_err                                       0          1          -    ZERO                 
+    Coverpoint cp_src_align                            50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin aligned                                         1          1          -    Covered              
+        bin unaligned                                       0          1          -    ZERO                 
+    Coverpoint cp_dst_align                            50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin aligned                                         1          1          -    Covered              
+        bin unaligned                                       0          1          -    ZERO                 
+    Cross cross_length_error                           10.00%        100          -    Uncovered            
+        covered/total bins:                                 1         10          -                      
+        missing/total bins:                                 9         10          -                      
+        % Hit:                                         10.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <len_2_4,success>                           1          1          -    Covered              
+            bin <len_9_16,*>                                0          1          2    ZERO                 
+            bin <len_5_8,*>                                 0          1          2    ZERO                 
+            bin <one_word,*>                                0          1          2    ZERO                 
+            bin <zero_length,*>                             0          1          2    ZERO                 
+            bin <*,failure>                                 0          1          5    ZERO                 
+    Cross cross_irq_error                              25.00%        100          -    Uncovered            
+        covered/total bins:                                 1          4          -                      
+        missing/total bins:                                 3          4          -                      
+        % Hit:                                         25.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <irq_enabled,success>                       1          1          -    Covered              
+            bin <irq_disabled,*>                            0          1          2    ZERO                 
+            bin <*,failure>                                 0          1          2    ZERO                 
+    Cross cross_src_dst_align                          25.00%        100          -    Uncovered            
+        covered/total bins:                                 1          4          -                      
+        missing/total bins:                                 3          4          -                      
+        % Hit:                                         25.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <aligned,aligned>                           1          1          -    Covered              
+            bin <unaligned,*>                               0          1          2    ZERO                 
+            bin <*,unaligned>                               0          1          2    ZERO                 
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /dma_pkg/dma_coverage/dma_cg                     32.96%        100          -    Uncovered            
+    covered/total bins:                                     9         37          -                      
+    missing/total bins:                                    28         37          -                      
+    % Hit:                                             24.32%        100          -                      
+    Coverpoint cp_length                               20.00%        100          -    Uncovered            
+        covered/total bins:                                 1          5          -                      
+        missing/total bins:                                 4          5          -                      
+        % Hit:                                         20.00%        100          -                      
+        bin zero_length                                     0          1          -    ZERO                 
+        bin one_word                                        0          1          -    ZERO                 
+        bin len_2_4                                         1          1          -    Covered              
+        bin len_5_8                                         0          1          -    ZERO                 
+        bin len_9_16                                        0          1          -    ZERO                 
+    Coverpoint cp_irq                                  50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin irq_disabled                                    0          1          -    ZERO                 
+        bin irq_enabled                                     1          1          -    Covered              
+    Coverpoint cp_error                                50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin success                                         1          1          -    Covered              
+        bin failure                                         0          1          -    ZERO                 
+    Coverpoint cp_error_code                           16.66%        100          -    Uncovered            
+        covered/total bins:                                 1          6          -                      
+        missing/total bins:                                 5          6          -                      
+        % Hit:                                         16.66%        100          -                      
+        bin no_error                                        1          1          -    Covered              
+        bin zero_len_err                                    0          1          -    ZERO                 
+        bin align_err                                       0          1          -    ZERO                 
+        bin read_err                                        0          1          -    ZERO                 
+        bin write_err                                       0          1          -    ZERO                 
+        bin other_err                                       0          1          -    ZERO                 
+    Coverpoint cp_src_align                            50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin aligned                                         1          1          -    Covered              
+        bin unaligned                                       0          1          -    ZERO                 
+    Coverpoint cp_dst_align                            50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin aligned                                         1          1          -    Covered              
+        bin unaligned                                       0          1          -    ZERO                 
+    Cross cross_length_error                           10.00%        100          -    Uncovered            
+        covered/total bins:                                 1         10          -                      
+        missing/total bins:                                 9         10          -                      
+        % Hit:                                         10.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <len_2_4,success>                           1          1          -    Covered              
+            bin <len_9_16,*>                                0          1          2    ZERO                 
+            bin <len_5_8,*>                                 0          1          2    ZERO                 
+            bin <one_word,*>                                0          1          2    ZERO                 
+            bin <zero_length,*>                             0          1          2    ZERO                 
+            bin <*,failure>                                 0          1          5    ZERO                 
+    Cross cross_irq_error                              25.00%        100          -    Uncovered            
+        covered/total bins:                                 1          4          -                      
+        missing/total bins:                                 3          4          -                      
+        % Hit:                                         25.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <irq_enabled,success>                       1          1          -    Covered              
+            bin <irq_disabled,*>                            0          1          2    ZERO                 
+            bin <*,failure>                                 0          1          2    ZERO                 
+    Cross cross_src_dst_align                          25.00%        100          -    Uncovered            
+        covered/total bins:                                 1          4          -                      
+        missing/total bins:                                 3          4          -                      
+        % Hit:                                         25.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <aligned,aligned>                           1          1          -    Covered              
+            bin <unaligned,*>                               0          1          2    ZERO                 
+            bin <*,unaligned>                               0          1          2    ZERO                 
+ Covergroup instance \/dma_pkg::dma_coverage::dma_cg  
+                                                       32.96%        100          -    Uncovered            
+    covered/total bins:                                     9         37          -                      
+    missing/total bins:                                    28         37          -                      
+    % Hit:                                             24.32%        100          -                      
+    Coverpoint cp_length                               20.00%        100          -    Uncovered            
+        covered/total bins:                                 1          5          -                      
+        missing/total bins:                                 4          5          -                      
+        % Hit:                                         20.00%        100          -                      
+        bin zero_length                                     0          1          -    ZERO                 
+        bin one_word                                        0          1          -    ZERO                 
+        bin len_2_4                                         1          1          -    Covered              
+        bin len_5_8                                         0          1          -    ZERO                 
+        bin len_9_16                                        0          1          -    ZERO                 
+    Coverpoint cp_irq                                  50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin irq_disabled                                    0          1          -    ZERO                 
+        bin irq_enabled                                     1          1          -    Covered              
+    Coverpoint cp_error                                50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin success                                         1          1          -    Covered              
+        bin failure                                         0          1          -    ZERO                 
+    Coverpoint cp_error_code                           16.66%        100          -    Uncovered            
+        covered/total bins:                                 1          6          -                      
+        missing/total bins:                                 5          6          -                      
+        % Hit:                                         16.66%        100          -                      
+        bin no_error                                        1          1          -    Covered              
+        bin zero_len_err                                    0          1          -    ZERO                 
+        bin align_err                                       0          1          -    ZERO                 
+        bin read_err                                        0          1          -    ZERO                 
+        bin write_err                                       0          1          -    ZERO                 
+        bin other_err                                       0          1          -    ZERO                 
+    Coverpoint cp_src_align                            50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin aligned                                         1          1          -    Covered              
+        bin unaligned                                       0          1          -    ZERO                 
+    Coverpoint cp_dst_align                            50.00%        100          -    Uncovered            
+        covered/total bins:                                 1          2          -                      
+        missing/total bins:                                 1          2          -                      
+        % Hit:                                         50.00%        100          -                      
+        bin aligned                                         1          1          -    Covered              
+        bin unaligned                                       0          1          -    ZERO                 
+    Cross cross_length_error                           10.00%        100          -    Uncovered            
+        covered/total bins:                                 1         10          -                      
+        missing/total bins:                                 9         10          -                      
+        % Hit:                                         10.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <len_2_4,success>                           1          1          -    Covered              
+            bin <len_9_16,*>                                0          1          2    ZERO                 
+            bin <len_5_8,*>                                 0          1          2    ZERO                 
+            bin <one_word,*>                                0          1          2    ZERO                 
+            bin <zero_length,*>                             0          1          2    ZERO                 
+            bin <*,failure>                                 0          1          5    ZERO                 
+    Cross cross_irq_error                              25.00%        100          -    Uncovered            
+        covered/total bins:                                 1          4          -                      
+        missing/total bins:                                 3          4          -                      
+        % Hit:                                         25.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <irq_enabled,success>                       1          1          -    Covered              
+            bin <irq_disabled,*>                            0          1          2    ZERO                 
+            bin <*,failure>                                 0          1          2    ZERO                 
+    Cross cross_src_dst_align                          25.00%        100          -    Uncovered            
+        covered/total bins:                                 1          4          -                      
+        missing/total bins:                                 3          4          -                      
+        % Hit:                                         25.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <aligned,aligned>                           1          1          -    Covered              
+            bin <unaligned,*>                               0          1          2    ZERO                 
+            bin <*,unaligned>                               0          1          2    ZERO                 
+
+TOTAL COVERGROUP COVERAGE: 32.96%  COVERGROUP TYPES: 1
+
+Total Coverage By Instance (filtered view): 32.96%
+
