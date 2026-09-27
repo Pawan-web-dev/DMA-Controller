@@ -1,0 +1,34 @@
+# run_uart.do - GUI mode with full signal visibility
+vlib work
+vlog uart_top.sv uart_tb.sv
+
+# -voptargs=+acc keeps all signals accessible to the wave viewer
+vsim -voptargs=+acc work.uart_tb
+
+# Add top-level TB signals
+add wave -divider "Clock/Reset"
+add wave sim:/uart_tb/clk
+add wave sim:/uart_tb/reset
+
+add wave -divider "TX"
+add wave sim:/uart_tb/tx_en
+add wave sim:/uart_tb/tx_data_in
+add wave sim:/uart_tb/tx_data
+add wave sim:/uart_tb/tx_busy
+add wave sim:/uart_tb/tx_done
+
+add wave -divider "RX"
+add wave sim:/uart_tb/rx_data
+add wave sim:/uart_tb/rx_data_out
+add wave sim:/uart_tb/rx_done
+add wave sim:/uart_tb/parity_error
+add wave sim:/uart_tb/stop_error
+add wave sim:/uart_tb/frame_error
+
+add wave -divider "Debug"
+add wave sim:/uart_tb/baud_tick
+add wave sim:/uart_tb/tick_16x
+add wave sim:/uart_tb/loopback_mode
+
+# Run
+run -all

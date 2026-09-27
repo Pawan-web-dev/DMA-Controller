@@ -1,0 +1,1133 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /uart_tb/dut/reset_sync_inst
+=== Design Unit: work.reset_sync
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         2         2         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /uart_tb/dut/reset_sync_inst
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File uart_top.sv
+------------------------------------IF Branch------------------------------------
+    12                                         5     Count coming in to IF
+    12              1                          2     
+    15              1                          3     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       5         5         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /uart_tb/dut/reset_sync_inst --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File uart_top.sv
+    11              1                          5     
+    13              1                          2     
+    14              1                          2     
+    16              1                          3     
+    17              1                          3     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         20         5        15    25.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /uart_tb/dut/reset_sync_inst --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                       async_reset           1           0           0           0           0           0           3       16.66 
+                                       reset_sync0           1           0           0           0           0           0           3       16.66 
+                                        sync_reset           1           0           0           0           0           0           3       16.66 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =          4 
+Toggled Node Count   =          1 
+Untoggled Node Count =          3 
+
+Toggle Coverage      =      25.00% (5 of 20 bins)
+
+=================================================================================
+=== Instance: /uart_tb/dut/baud_inst
+=== Design Unit: work.baud_gen
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         9         9         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /uart_tb/dut/baud_inst
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File uart_top.sv
+------------------------------------IF Branch------------------------------------
+    46                                   1123245     Count coming in to IF
+    46              1                         22     
+    49              1                    1123223     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    50                                   1123223     Count coming in to IF
+    50              1                       3456     
+    53              1                    1119767     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    62                                      7131     Count coming in to IF
+    62              1                          2     
+    65              1                       3456     
+    73              1                       3673     
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    66                                      3456     Count coming in to IF
+    66              1                        216     
+    69              1                       3240     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       2         2         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /uart_tb/dut/baud_inst --
+
+  File uart_top.sv
+----------------Focused Condition View-------------------
+Line       50 Item    1  (count_16x == (325 - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       66 Item    1  (count_1x == 15)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      15        15         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /uart_tb/dut/baud_inst --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File uart_top.sv
+    45              1                    1123245     
+    47              1                         22     
+    48              1                         22     
+    51              1                       3456     
+    52              1                       3456     
+    54              1                    1119767     
+    55              1                    1119767     
+    61              1                       7131     
+    63              1                          2     
+    64              1                          2     
+    67              1                        216     
+    68              1                        216     
+    70              1                       3240     
+    71              1                       3240     
+    74              1                       3673     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         38        33         5    86.84%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /uart_tb/dut/baud_inst --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                             reset           1           0           0           0           0           0           3       16.66 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         17 
+Toggled Node Count   =         16 
+Untoggled Node Count =          1 
+
+Toggle Coverage      =      86.84% (33 of 38 bins)
+
+=================================================================================
+=== Instance: /uart_tb/dut/tx_inst
+=== Design Unit: work.uart_tx
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        24        23         1    95.83%
+
+================================Branch Details================================
+
+Branch Coverage for instance /uart_tb/dut/tx_inst
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File uart_top.sv
+------------------------------------IF Branch------------------------------------
+    109                                       39     Count coming in to IF
+    109             1                          2     
+    111             1                         37     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    125                                      459     Count coming in to IF
+    125             1                          2     
+    128             1                         12     
+    133             1                         12     
+                                             433     All False Count
+Branch totals: 4 hits of 4 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    143                                      459     Count coming in to IF
+    143             1                          2     
+    150             1                        457     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    153                                      457     Count coming in to IF
+    153             1                        216     
+                                             241     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    154                                      216     Count coming in to CASE
+    155             1                         84     
+    166             1                         12     
+    170             1                         96     
+    179             1                         12     
+    183             1                         12     
+    189             1                    ***0***     
+Branch totals: 5 hits of 6 branches = 83.33%
+
+------------------------------------IF Branch------------------------------------
+    157                                       84     Count coming in to IF
+    157             1                         12     
+                                              72     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    171                                       96     Count coming in to IF
+    171             1                         12     
+    174             1                         84     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    199                                      146     Count coming in to CASE
+    200             1                         12     
+    201             1                         96     
+    202             1                         12     
+    203             1                         26     
+Branch totals: 4 hits of 4 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       6         5         1    83.33%
+
+================================Condition Details================================
+
+Condition Coverage for instance /uart_tb/dut/tx_inst --
+
+  File uart_top.sv
+----------------Focused Condition View-------------------
+Line       128 Item    1  (tx_en_rise && ~tx_busy)
+Condition totals: 1 of 2 input terms covered = 50.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  tx_en_rise         Y
+     tx_busy         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  tx_en_rise_0          -                             
+  Row   2:          1  tx_en_rise_1          ~tx_busy                      
+  Row   3:          1  tx_busy_0             tx_en_rise                    
+  Row   4:    ***0***  tx_busy_1             tx_en_rise                    
+
+----------------Focused Condition View-------------------
+Line       133 Item    1  ((baud_tick && (cs == IDLE)) && tx_start_pending)
+Condition totals: 3 of 3 input terms covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       171 Item    1  (bit_count == (8 - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      2         2         0   100.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /uart_tb/dut/tx_inst --
+
+  File uart_top.sv
+----------------Focused Expression View-----------------
+Line       115 Item    1  (tx_en & ~tx_en_d)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+
+FSM Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    FSM States                       5         5         0   100.00%
+    FSM Transitions                  8         5         3    62.50%
+
+================================FSM Details================================
+
+FSM Coverage for instance /uart_tb/dut/tx_inst --
+
+FSM_ID: cs
+    Current State Object : cs
+    ----------------------
+    State Value MapInfo :
+    ---------------------
+Line          State Name               Value
+----          ----------               -----
+ 155                IDLE                   0
+ 166               START                   1
+ 170                DATA                   2
+ 179              PARITY                   3
+ 183                STOP                   4
+    Covered States :
+    ----------------
+                   State           Hit_count
+                   -----           ---------
+                    IDLE                  14          
+                   START                  12          
+                    DATA                  12          
+                  PARITY                  12          
+                    STOP                  12          
+    Covered Transitions :
+    ---------------------
+Line            Trans_ID           Hit_count          Transition          
+----            --------           ---------          ----------          
+ 158                   0                  12          IDLE -> START                 
+ 167                   1                  12          START -> DATA                 
+ 172                   3                  12          DATA -> PARITY                
+ 180                   5                  12          PARITY -> STOP                
+ 184                   7                  12          STOP -> IDLE                  
+    Uncovered Transitions :
+    -----------------------
+Line            Trans_ID          Transition          
+----            --------          ----------          
+ 144                   2          START -> IDLE       
+ 144                   4          DATA -> IDLE        
+ 144                   6          PARITY -> IDLE      
+
+
+    Summary                       Bins      Hits    Misses  Coverage
+    -------                       ----      ----    ------  --------
+        FSM States                   5         5         0   100.00%
+        FSM Transitions              8         5         3    62.50%
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      38        37         1    97.36%
+
+================================Statement Details================================
+
+Statement Coverage for instance /uart_tb/dut/tx_inst --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File uart_top.sv
+    108             1                         39     
+    110             1                          2     
+    112             1                         37     
+    115             1                         51     
+    124             1                        459     
+    126             1                          2     
+    127             1                          2     
+    131             1                         12     
+    132             1                         12     
+    135             1                         12     
+    142             1                        459     
+    144             1                          2     
+    145             1                          2     
+    146             1                          2     
+    147             1                          2     
+    148             1                          2     
+    149             1                          2     
+    151             1                        457     
+    156             1                         84     
+    158             1                         12     
+    159             1                         12     
+    160             1                         12     
+    161             1                         12     
+    162             1                         12     
+    167             1                         12     
+    172             1                         12     
+    173             1                         12     
+    175             1                         84     
+    180             1                         12     
+    184             1                         12     
+    185             1                         12     
+    186             1                         12     
+    190             1                    ***0***     
+    198             1                        146     
+    200             1                         12     
+    201             1                         96     
+    202             1                         12     
+    203             1                         26     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         91        80        11    87.91%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /uart_tb/dut/tx_inst --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                      bit_count[3]           0           0           0           0           0           0           3        0.00 
+                                                cs               ENUM type       Value       Count 
+                                             reset           1           0           0           0           0           0           3       16.66 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         44 
+Toggled Node Count   =         42 
+Untoggled Node Count =          2 
+
+Toggle Coverage      =      87.91% (80 of 91 bins)
+
+=================================================================================
+=== Instance: /uart_tb/dut/rx_inst
+=== Design Unit: work.uart_rx
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        28        27         1    96.42%
+
+================================Branch Details================================
+
+Branch Coverage for instance /uart_tb/dut/rx_inst
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File uart_top.sv
+------------------------------------IF Branch------------------------------------
+    231                                      201     Count coming in to IF
+    231             1                          2     
+    234             1                        199     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    261                                     6992     Count coming in to IF
+    261             1                          2     
+    272             1                       6990     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    275                                     6990     Count coming in to IF
+    275             1                       3456     
+                                            3534     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    276                                     3456     Count coming in to CASE
+    277             1                       1600     
+    290             1                         96     
+    307             1                       1408     
+    323             1                        176     
+    333             1                        176     
+    359             1                    ***0***     
+Branch totals: 5 hits of 6 branches = 83.33%
+
+------------------------------------IF Branch------------------------------------
+    284                                     1600     Count coming in to IF
+    284             1                         12     
+                                            1588     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    293                                       96     Count coming in to IF
+    293             1                         12     
+                                              84     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    294                                       12     Count coming in to IF
+    294             1                         11     
+    299             1                          1     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    310                                     1408     Count coming in to IF
+    310             1                         88     
+                                            1320     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    314                                       88     Count coming in to IF
+    314             1                         11     
+    317             1                         77     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    326                                      176     Count coming in to IF
+    326             1                         11     
+                                             165     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    336                                      176     Count coming in to IF
+    336             1                         11     
+                                             165     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    338                                       11     Count coming in to IF
+    338             1                          1     
+                                              10     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       5         5         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /uart_tb/dut/rx_inst --
+
+  File uart_top.sv
+----------------Focused Condition View-------------------
+Line       293 Item    1  (sample_count == 7)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       310 Item    1  (sample_count == 15)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       314 Item    1  (bit_count == (8 - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       326 Item    1  (sample_count == 15)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       336 Item    1  (sample_count == 15)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      1         1         0   100.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /uart_tb/dut/rx_inst --
+
+  File uart_top.sv
+----------------Focused Expression View-----------------
+Line       347 Item    1  (parity_received != parity_calc)
+Expression totals: 1 of 1 input term covered = 100.00%
+
+
+FSM Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    FSM States                       5         5         0   100.00%
+    FSM Transitions                  8         6         2    75.00%
+
+================================FSM Details================================
+
+FSM Coverage for instance /uart_tb/dut/rx_inst --
+
+FSM_ID: cs
+    Current State Object : cs
+    ----------------------
+    State Value MapInfo :
+    ---------------------
+Line          State Name               Value
+----          ----------               -----
+ 277                IDLE                   0
+ 290               START                   1
+ 307                DATA                   2
+ 323              PARITY                   3
+ 333                STOP                   4
+    Covered States :
+    ----------------
+                   State           Hit_count
+                   -----           ---------
+                    IDLE                  14          
+                   START                  12          
+                    DATA                  11          
+                  PARITY                  11          
+                    STOP                  11          
+    Covered Transitions :
+    ---------------------
+Line            Trans_ID           Hit_count          Transition          
+----            --------           ---------          ----------          
+ 285                   0                  12          IDLE -> START                 
+ 301                   1                   1          START -> IDLE                 
+ 296                   2                  11          START -> DATA                 
+ 316                   3                  11          DATA -> PARITY                
+ 329                   5                  11          PARITY -> STOP                
+ 354                   7                  11          STOP -> IDLE                  
+    Uncovered Transitions :
+    -----------------------
+Line            Trans_ID          Transition          
+----            --------          ----------          
+ 262                   4          DATA -> IDLE        
+ 262                   6          PARITY -> IDLE      
+
+
+    Summary                       Bins      Hits    Misses  Coverage
+    -------                       ----      ----    ------  --------
+        FSM States                   5         5         0   100.00%
+        FSM Transitions              8         6         2    75.00%
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      50        49         1    98.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /uart_tb/dut/rx_inst --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File uart_top.sv
+    230             1                        201     
+    232             1                          2     
+    233             1                          2     
+    235             1                        199     
+    236             1                        199     
+    251             1                         50     
+    252             1                         50     
+    260             1                       6992     
+    262             1                          2     
+    263             1                          2     
+    264             1                          2     
+    265             1                          2     
+    266             1                          2     
+    267             1                          2     
+    268             1                          2     
+    269             1                          2     
+    270             1                          2     
+    271             1                          2     
+    273             1                       6990     
+    278             1                       1600     
+    279             1                       1600     
+    280             1                       1600     
+    281             1                       1600     
+    285             1                         12     
+    286             1                         12     
+    292             1                         96     
+    296             1                         11     
+    297             1                         11     
+    298             1                         11     
+    301             1                          1     
+    302             1                          1     
+    309             1                       1408     
+    311             1                         88     
+    312             1                         88     
+    315             1                         11     
+    316             1                         11     
+    318             1                         77     
+    325             1                        176     
+    327             1                         11     
+    328             1                         11     
+    329             1                         11     
+    335             1                        176     
+    339             1                          1     
+    342             1                          1     
+    347             1                         11     
+    350             1                         11     
+    351             1                         11     
+    354             1                         11     
+    355             1                         11     
+    360             1                    ***0***     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         87        76        11    87.35%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /uart_tb/dut/rx_inst --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                      bit_count[3]           0           0           0           0           0           0           3        0.00 
+                                                cs               ENUM type       Value       Count 
+                                             reset           1           0           0           0           0           0           3       16.66 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         42 
+Toggled Node Count   =         40 
+Untoggled Node Count =          2 
+
+Toggle Coverage      =      87.35% (76 of 87 bins)
+
+=================================================================================
+=== Instance: /uart_tb/dut
+=== Design Unit: work.uart_top
+=================================================================================
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         68        58        10    85.29%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /uart_tb/dut --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                             reset           1           0           0           0           0           0           3       16.66 
+                                        sync_reset           1           0           0           0           0           0           3       16.66 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         30 
+Toggled Node Count   =         28 
+Untoggled Node Count =          2 
+
+Toggle Coverage      =      85.29% (58 of 68 bins)
+
+=================================================================================
+=== Instance: /uart_tb/u_assert_inst
+=== Design Unit: work.uart_assertions
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       7         7         0   100.00%
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/uart_tb/u_assert_inst/A_IDLE_AFTER_RESET
+                     uart_assertions.sv(33)             0          1    1123243          0    1123244          0           1 off
+/uart_tb/u_assert_inst/A_IDLE_LINE
+                     uart_assertions.sv(41)             0     436801     686424         19    1123244          0           1 off
+/uart_tb/u_assert_inst/A_TX_DONE_PULSE
+                     uart_assertions.sv(48)             0         12    1123213         19    1123244          0           1 off
+/uart_tb/u_assert_inst/A_RX_DONE_PULSE
+                     uart_assertions.sv(55)             0         11    1123214         19    1123244          0           1 off
+/uart_tb/u_assert_inst/A_BAUD_TICK_AFTER_16X
+                     uart_assertions.sv(62)             0        216    1123009         19    1123244          0           1 off
+/uart_tb/u_assert_inst/A_STOP_IMPLIES_FRAME
+                     uart_assertions.sv(69)             0        325    1122900         19    1123244          0           1 off
+/uart_tb/u_assert_inst/A_NO_X_TX
+                     uart_assertions.sv(76)             0    1123225          0         19    1123244          0           1 off
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         62        57         5    91.93%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /uart_tb/u_assert_inst --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                             reset           1           0           0           0           0           0           3       16.66 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         29 
+Toggled Node Count   =         28 
+Untoggled Node Count =          1 
+
+Toggle Coverage      =      91.93% (57 of 62 bins)
+
+=================================================================================
+=== Instance: /uart_tb
+=== Design Unit: work.uart_tb
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        10         7         3    70.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /uart_tb
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File uart_tb.sv
+------------------------------------IF Branch------------------------------------
+    37                                       116     Count coming in to IF
+    37              1                         25     
+    37              2                         91     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    90                                        18     Count coming in to IF
+    90              1                         18     
+    93              1                    ***0***     
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    138                                        7     Count coming in to IF
+    138             1                          1     
+                                               6     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    291                                        4     Count coming in to IF
+    291             1                          4     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    302                                        1     Count coming in to IF
+    302             1                          1     
+    303             1                    ***0***     
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       2         0         2     0.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /uart_tb --
+
+  File uart_tb.sv
+----------------Focused Condition View-------------------
+Line       291 Item    1  (rx_d === lp[i])
+Condition totals: 0 of 1 input term covered = 0.00%
+
+        Input Term   Covered  Reason for no coverage   Hint
+       -----------  --------  -----------------------  --------------
+  (rx_d === lp[i])         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (rx_d === lp[i])_0    -                             
+  Row   2:          1  (rx_d === lp[i])_1    -                             
+
+----------------Focused Condition View-------------------
+Line       302 Item    1  (fail_count == 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+         Input Term   Covered  Reason for no coverage   Hint
+        -----------  --------  -----------------------  --------------
+  (fail_count == 0)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (fail_count == 0)_0   -                             
+  Row   2:          1  (fail_count == 0)_1   -                             
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      3         3         0   100.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /uart_tb --
+
+  File uart_tb.sv
+-----------Focused Expression View (Bimodal)------------
+Line       37 Item    1  (loopback_en? tx_data: rx_data_tb)
+Expression totals: 3 of 3 input terms covered = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                     147       143         4    97.27%
+
+================================Statement Details================================
+
+Statement Coverage for instance /uart_tb --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File uart_tb.sv
+    18              1                    2246490     
+    18              2                    2246489     
+    37              1                        117     
+    91              1                         18     
+    92              1                         18     
+    94              1                    ***0***     
+    95              1                    ***0***     
+    100             1                         12     
+    100             2                    ***0***     
+    101             1                         12     
+    102             1                         12     
+    103             1                         12     
+    104             1                         12     
+    105             1                         12     
+    106             1                         12     
+    107             1                         12     
+    113             1                          8     
+    114             1                          8     
+    115             1                      20800     
+    115             2                      20800     
+    116             1                          8     
+    116             2                         64     
+    117             1                     332800     
+    117             2                     332800     
+    118             1                         64     
+    120             1                      41600     
+    120             2                      41600     
+    121             1                          8     
+    122             1                      41600     
+    122             2                      41600     
+    123             1                          8     
+    130             1                          7     
+    131             1                      36400     
+    131             2                      36400     
+    132             1                          7     
+    132             2                         56     
+    133             1                         56     
+    134             1                     291200     
+    134             2                     291200     
+    137             1                          7     
+    138             1                          1     
+    139             1                          7     
+    140             1                      36400     
+    140             2                      36400     
+    142             1                          7     
+    143             1                      36400     
+    143             2                      36400     
+    144             1                          7     
+    145             1                      36400     
+    145             2                      36400     
+    153             1                         11     
+    154             1                         11     
+    155             1                         11     
+    156             1                         11     
+    157             1                         11     
+    158             1                         11     
+    162             1                          1     
+    163             1                          1     
+    164             1                          1     
+    165             1                          1     
+    167             1                         20     
+    167             2                         20     
+    168             1                          1     
+    169             1                         20     
+    169             2                         20     
+    171             1                          1     
+    172             1                          1     
+    173             1                          1     
+    174             1                          1     
+    176             1                          1     
+    177             1                          1     
+    180             1                          1     
+    185             1                          1     
+    186             1                          1     
+    188             1                          1     
+    190             1                          1     
+    193             1                          1     
+    198             1                          1     
+    198             2                          1     
+    198             3                          1     
+    199             1                          1     
+    199             2                          1     
+    199             3                          1     
+    200             1                          1     
+    200             2                          6     
+    202             1                          6     
+    203             1                          6     
+    205             1                          6     
+    208             1                          1     
+    211             1                          1     
+    215             1                          1     
+    216             1                          1     
+    218             1                          1     
+    219             1                          1     
+    223             1                          1     
+    223             2                          1     
+    223             3                          1     
+    224             1                          1     
+    224             2                          3     
+    226             1                          3     
+    227             1                          3     
+    229             1                          3     
+    232             1                          1     
+    235             1                          1     
+    239             1                          1     
+    240             1                          1     
+    242             1                          1     
+    244             1                          1     
+    247             1                          1     
+    251             1                          1     
+    252             1                          1     
+    254             1                          1     
+    255             1                          1     
+    257             1                          1     
+    260             1                          1     
+    266             1                          1     
+    267             1                          1     
+    268             1                          1     
+    269             1                          1     
+    271             1                          1     
+    272             1                          1     
+    274             1                          1     
+    277             1                          1     
+    283             1                          1     
+    283             2                          1     
+    283             3                          1     
+    283             4                          1     
+    284             1                          1     
+    285             1                         20     
+    285             2                         20     
+    286             1                          1     
+    286             2                          4     
+    288             1                          4     
+    289             1                          4     
+    291             1                          4     
+    293             1                          1     
+    294             1                         20     
+    294             2                         20     
+    295             1                          1     
+    297             1                          1     
+    299             1                          1     
+    300             1                          1     
+    302             1                          1     
+    303             1                    ***0***     
+    304             1                          1     
+    305             1                          1     
+    307             1                          1     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        194        70       124    36.08%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /uart_tb --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                  fail_count[0-31]           0           0                                                                    0.00 
+                                     pass_count[4]           0           1                                                                   50.00 
+                                  pass_count[5-31]           0           0                                                                    0.00 
+                                             reset           1           0           0           0           0           0           3       16.66 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         95 
+Toggled Node Count   =         34 
+Untoggled Node Count =         61 
+
+Toggle Coverage      =      36.08% (70 of 194 bins)
+
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass     Vacuous    Disable    Attempt     Active Peak Active ATV
+                                                  Count        Count    Count      Count      Count       Count  Count          
+--------------------------------------------------------------------------------------------------------------------------------
+/uart_tb/u_assert_inst/A_IDLE_AFTER_RESET
+                     uart_assertions.sv(33)             0          1    1123243          0    1123244          0           1 off
+/uart_tb/u_assert_inst/A_IDLE_LINE
+                     uart_assertions.sv(41)             0     436801     686424         19    1123244          0           1 off
+/uart_tb/u_assert_inst/A_TX_DONE_PULSE
+                     uart_assertions.sv(48)             0         12    1123213         19    1123244          0           1 off
+/uart_tb/u_assert_inst/A_RX_DONE_PULSE
+                     uart_assertions.sv(55)             0         11    1123214         19    1123244          0           1 off
+/uart_tb/u_assert_inst/A_BAUD_TICK_AFTER_16X
+                     uart_assertions.sv(62)             0        216    1123009         19    1123244          0           1 off
+/uart_tb/u_assert_inst/A_STOP_IMPLIES_FRAME
+                     uart_assertions.sv(69)             0        325    1122900         19    1123244          0           1 off
+/uart_tb/u_assert_inst/A_NO_X_TX
+                     uart_assertions.sv(76)             0    1123225          0         19    1123244          0           1 off
+
+Total Coverage By Instance (filtered view): 88.22%
+

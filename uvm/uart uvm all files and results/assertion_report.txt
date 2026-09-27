@@ -1,0 +1,15 @@
+Coverage Report Summary Data by instance
+
+=================================================================================
+=== Instance: /uart_tb/u_assert_inst
+=== Design Unit: work.uart_assertions
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Assertions                      11         7         4    63.63%
+
+
+TOTAL ASSERTION COVERAGE: 63.63%  ASSERTIONS: 11
+
+Total Coverage By Instance (filtered view): 63.63%
+
