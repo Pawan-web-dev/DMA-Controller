@@ -1,0 +1,55 @@
+vlib work
+vmap work work
+vlog -sv -mfcu -cuname ahb_cu ahb_master.sv ahb_slave.sv ahb_if.sv ahb_pkg.sv ahb_sva.sv tb_top.sv
+
+vsim -voptargs=+acc -assertdebug work.tb_top +UVM_TESTNAME=ahb_sanity_test +UVM_NO_RELNOTES
+add wave -r /*
+run -all
+assertion report -file sanity.rpt
+coverage save -onexit cov_sanity.ucdb
+
+# --- Test 2: FIFO ---
+vsim -voptargs=+acc -assertdebug work.tb_top +UVM_TESTNAME=ahb_fifo_test +UVM_NO_RELNOTES
+add wave -r /*
+run -all
+assertion report -file fifo.rpt
+coverage save -onexit cov_fifo.ucdb
+quit -sim
+
+# --- Test 3: wait states ---
+vsim -voptargs=+acc -assertdebug work.tb_top +UVM_TESTNAME=ahb_wait_test +UVM_NO_RELNOTES
+add wave -r /*
+run -all
+assertion report -file wait.rpt
+coverage save -onexit cov_wait.ucdb
+quit -sim
+
+# --- Test 4: invalid lengths ---
+vsim -voptargs=+acc -assertdebug work.tb_top +UVM_TESTNAME=ahb_invalid_test +UVM_NO_RELNOTES
+add wave -r /*
+run -all
+assertion report -file invalid.rpt
+coverage save -onexit cov_invalid.ucdb
+quit -sim
+
+# --- Test 5: error injection ---
+vsim -voptargs=+acc -assertdebug work.tb_top +UVM_TESTNAME=ahb_error_test +UVM_NO_RELNOTES
+add wave -r /*
+run -all
+assertion report -file error.rpt
+coverage save -onexit cov_error.ucdb
+quit -sim
+
+# --- Test 6: random ---
+vsim -voptargs=+acc -assertdebug work.tb_top +UVM_TESTNAME=ahb_random_test +UVM_NO_RELNOTES
+add wave -r /*
+run -all
+assertion report -file random.rpt
+coverage save -onexit cov_random.ucdb
+quit -sim
+
+# --- Merge all six UCDBs ---
+vcover merge merged.ucdb cov_sanity.ucdb cov_fifo.ucdb cov_wait.ucdb cov_invalid.ucdb cov_error.ucdb cov_random.ucdb
+
+# --- Full coverage report ---
+vcover report -details merged.ucdb
